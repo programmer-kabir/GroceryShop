@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@layer base {
+  body {
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+.primaryButton {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  background-color: #1e40af;
+}
+.secondaryButton {
+  background-color: transparent;
+  color: #1e3a8a;
+  border: 2px solid #1e3a8a;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+.lang-en .bn {
+  display: none;
+}
+
+.lang-bn .en {
+  display: none;
+}
+@layer utilities {
+  .container-custom {
+    @apply w-full  px-4;
+  }
+}
+.input-filter {
+  @apply w-full px-3 py-2 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md text-sm focus:outline-none focus:border-blue-500 dark:text-white;
+}
+/* hide scrollbar */
+/* hide scrollbar but allow scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.productImage {
+  height: 700px;
+  width: 100%;
+  position: relative;
+}
+/* Custom Horizontal Scrollbar */
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff; /* light gray */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d6d6; /* black */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d6d6d6;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modalPop {
+  animation: modalPop 0.25s ease;
+}
+.swiper {
+  width: 100%;
+}

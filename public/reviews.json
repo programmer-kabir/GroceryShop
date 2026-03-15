@@ -1,0 +1,11 @@
+[
+  {
+    "subCategoryId": "sub_cat8",
+    "name": { "en": "Fruits & Vegetables", "bn": "ফল এবং সবজি" },
+    "slug": "indoor-sports",
+    "image": "https://supplylinkbd.com/img/Sunam_Shop/Indoor-Sports.webp",
+    "isFeatured": false,
+    "parentId": null,
+    "level": 3
+  }
+]
